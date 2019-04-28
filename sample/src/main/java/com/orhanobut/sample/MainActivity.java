@@ -4,16 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.orhanobut.logger.AndroidLogAdapter;
-import com.orhanobut.logger.DiskLogAdapter;
-import com.orhanobut.logger.FormatStrategy;
-import com.orhanobut.logger.Logger;
-import com.orhanobut.logger.PrettyFormatStrategy;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
 public class MainActivity extends Activity {
 
   @Override
@@ -24,7 +14,7 @@ public class MainActivity extends Activity {
     Log.d("Tag", "I'm a log which you don't see easily, hehe");
     Log.d("json content", "{ \"key\": 3, \n \"value\": something}");
     Log.d("error", "There is a crash somewhere or any warning");
-
+/*
     Logger.addLogAdapter(new AndroidLogAdapter());
     Logger.d("message");
 
@@ -81,6 +71,8 @@ public class MainActivity extends Activity {
         .build();
     Logger.addLogAdapter(new AndroidLogAdapter(formatStrategy));
 
-    Logger.w("my log message with my tag");
+    Logger.w("my log message with my tag");*/
   }
+
+
 }
