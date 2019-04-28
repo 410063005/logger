@@ -28,6 +28,9 @@ dependencies {
   testImplementation deps.mockito
   testImplementation deps.json
   testImplementation deps.kotlin
+
+  implementation deps.okhttp
+  implementation deps.interceptor
 }
 
 apply from: rootProject.file('gradle/maven_push.gradle')
