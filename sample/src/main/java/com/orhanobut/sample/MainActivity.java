@@ -3,6 +3,7 @@ package com.orhanobut.sample;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 public class MainActivity extends Activity {
 
@@ -74,5 +75,7 @@ public class MainActivity extends Activity {
     Logger.w("my log message with my tag");*/
   }
 
-
+  public void gotoUploadPage(View view) {
+    UploadLogActivity.start(this);
+  }
 }
