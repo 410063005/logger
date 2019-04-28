@@ -3,6 +3,7 @@ package com.orhanobut.logger;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.os.Process;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
@@ -129,7 +130,7 @@ public class CsvFormatStrategy implements FormatStrategy {
         String diskPath = Environment.getExternalStorageDirectory().getAbsolutePath();
         String folder = diskPath + File.separatorChar + "logger";
 
-        HandlerThread ht = new HandlerThread("AndroidFileLogger." + folder);
+        HandlerThread ht = new HandlerThread("AndroidFileLogger." + folder, Process.THREAD_PRIORITY_BACKGROUND);
         ht.start();
         Handler handler = new DiskLogStrategy.WriteHandler(ht.getLooper(), folder, MAX_BYTES);
         logStrategy = new DiskLogStrategy(handler);
